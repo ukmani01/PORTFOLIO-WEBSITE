@@ -1,0 +1,79 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Sidebar from "../src/assets/components/layout/Sidebar";
+import Header from "../src/assets/components/layout/Header";
+import Dashboard from "../src/assets/pages/Dashboard";
+import Profile from "../src/assets/pages/Profile";
+import "./App.css"
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <div className="fist-dive">
+        <Sidebar className="hidden md:block" />
+
+        <div className="right-container">
+          <Header />
+
+          <main className="main-area">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/profile" element={<Profile />} />
+            </Routes>
+          </main>
+        </div>
+      </div>
+    </BrowserRouter>
+
+  )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+iv>
+        <table className="w-full min-w-[600px] text-sm md:text-base border border-gray-400">
+          <thead>
+            <tr className="border-b border-gray-400">
+              <th className="px-4 py-2 text-left border-r border-gray-400">Time</th>
+              <th className="px-4 py-2 text-left border-r border-gray-400">Date</th>
+              <th className="px-4 py-2 text-left border-r border-gray-400">Topic</th>
+              <th className="px-4 py-2 text-left">Concept</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr className="border-b border-gray-400 hover:bg-gray-50">
+              <td className="px-4 py-2 border-r border-gray-400">12</td>
+              <td className="px-4 py-2 border-r border-gray-400">3.12.2025</td>
+              <td className="px-4 py-2 border-r border-gray-400">react,</td>
+              <td className="px-4 py-2  whitespace-normal">
+                uncontroll input, useContext Api, React memo, lifting state,
+                pure Component, and flex box
+              </td>
+            </tr>
+            <tr>
+              <td className="px-4 py-2 border-r border-gray-400">12.30</td>
+              <td className="px-4 py-2 border-r border-gray-400">4.12.2025</td>
+              <td className="px-4 py-2 border-r border-gray-400">react,javascript,tailwind</td>
+              <td className="px-4 py-2  whitespace-normal">
+                yeaterday consept recall,usememo,useCallback,useReducer,project consept overview,advanced flex box,
+              </td>
+            </tr>
+          </tbody>
+        </table>
